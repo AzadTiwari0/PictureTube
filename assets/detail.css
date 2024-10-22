@@ -1,0 +1,97 @@
+@import './colors.css';
+
+.detail {
+    padding: 1%;
+    display: flex;
+    align-items: flex-start; /* Aligns items to the start (top) */
+    gap: 1rem; /* Adds space between the image and the text */
+}
+
+.detail img {
+    max-width: calc(45vw - 5rem);
+    padding: 0.75rem;
+    border: 4px solid black !important;
+}
+
+.detail .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns text to the top */
+    align-items: flex-end; /* Aligns text to the right side */
+}
+
+.detail .image_color {
+    width: 12rem;
+    height: 4.5rem;
+    padding: 0.75rem;
+    border: 2px solid var(--skymagenta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_color span {
+    border: 2px solid var(--black);
+    padding: 0.75rem;
+    text-transform: uppercase;
+}
+
+.detail .description::first-letter {
+    text-transform: uppercase;
+}
+
+/* Parachute Animation CSS */
+#parachute {
+    font-size: 3rem;
+    position: absolute;
+    top: -200px; /* Start above the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 3s ease-in-out; /* Controls the landing effect */
+    display: none;
+}
+
+#parachute.landing {
+    top: 70%; /* Adjust to where you want the parachute to "land" */
+}
+
+/* Download button styling */
+#downloadBtn {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+.open-button {
+    border: 2px solid #00ffff; /* Neon color */
+    color: #00ffff; /* Text color */
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; /* Neon glow */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.open-button:hover {
+    background-color: rgba(0, 255, 255, 0.2); /* Lighter background on hover */
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Neon effect on hover */
+}
+
